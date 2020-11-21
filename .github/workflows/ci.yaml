@@ -1,0 +1,35 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install Poetry
+      run: |
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    - name: Install dependencies
+      run: |
+        poetry install
+    - name: Lint
+      run: |
+        poetry run lint
+    - name: Format
+      run: |
+        poetry run format
+        if ! git diff --quiet python_project tests --; then exit 1; fi
+    - name: Typecheck
+      run: |
+        poetry run typecheck
+    - name: Test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        poetry run test
+        poetry run cov
