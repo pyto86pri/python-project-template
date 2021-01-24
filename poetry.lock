@@ -95,7 +95,7 @@ toml = ["toml"]
 
 [[package]]
 name = "coveralls"
-version = "2.2.0"
+version = "3.0.0"
 description = "Show coverage stats online via coveralls.io"
 category = "dev"
 optional = false
@@ -361,7 +361,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0d98eaca02cb4295a28ca1c27ca6da5f0f67ddec8f8d4793909c69df5af9da56"
+content-hash = "25ee8fe684c8dbb47e2d4a487cd5ddaab864463bcfa21a40532d77f5cdb85903"
 
 [metadata.files]
 appdirs = [
@@ -432,8 +432,8 @@ coverage = [
     {file = "coverage-5.3.tar.gz", hash = "sha256:280baa8ec489c4f542f8940f9c4c2181f0306a8ee1a54eceba071a449fb870a0"},
 ]
 coveralls = [
-    {file = "coveralls-2.2.0-py2.py3-none-any.whl", hash = "sha256:2301a19500b06649d2ec4f2858f9c69638d7699a4c63027c5d53daba666147cc"},
-    {file = "coveralls-2.2.0.tar.gz", hash = "sha256:b990ba1f7bc4288e63340be0433698c1efe8217f78c689d254c2540af3d38617"},
+    {file = "coveralls-3.0.0-py2.py3-none-any.whl", hash = "sha256:f8384968c57dee4b7133ae701ecdad88e85e30597d496dcba0d7fbb470dca41f"},
+    {file = "coveralls-3.0.0.tar.gz", hash = "sha256:5399c0565ab822a70a477f7031f6c88a9dd196b3de2877b3facb43b51bd13434"},
 ]
 docopt = [
     {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
